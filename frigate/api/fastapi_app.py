@@ -129,4 +129,5 @@ def create_fastapi_app(
     app.event_metadata_updater = event_metadata_updater
     app.jwt_token = get_jwt_secret() if frigate_config.auth.enabled else None
 
+    logger.info(f"jwt token: {app.jwt_token}")
     return app
