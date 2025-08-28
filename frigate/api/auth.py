@@ -173,7 +173,7 @@ def verify_password(password, password_hash):
 
 
 def create_encoded_jwt(user, role, expiration, secret):
-    logger.info(f"create_encoded_jwt {user} {role} {expiration} {secret}")
+    logger.info(f"create_encoded_jwt {user} {role} {expiration} {secret} {}", type(secret))
     return jwt.encode(
         {"alg": "HS256"}, {"sub": user, "role": role, "exp": expiration}, secret
     )
