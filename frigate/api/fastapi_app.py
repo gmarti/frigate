@@ -154,4 +154,5 @@ def create_fastapi_app(
     else:
         app.jwt_token = None
 
+    logger.info(f"jwt token: {app.jwt_token}")
     return app
